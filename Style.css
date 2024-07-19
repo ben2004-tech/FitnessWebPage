@@ -165,7 +165,7 @@ body {
   }
   
   #btn:hover {
-    background-color: darkgray; /* Change the background color on hover */
+    background-color: gray; /* Change the background color on hover */
   }
   With these changes:
   
