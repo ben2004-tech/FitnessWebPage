@@ -26,10 +26,58 @@
 <div id="Message"><h3>Our goal is to make you the fittest, strongest and happiest version of yourself through a daily pursuit of fitness and self-improvement!</h3></div>
 
 
+<h4 id="heading">Get started with some basic info now!</h4>
+   <div class="quiz-container">
+    <h2>Fitness Goals Quiz</h2>
+    <form id="fitness-quiz">
+        <div class="question">
+            <!-- Question 1 -->
+            <label for="goal">1. What is your primary fitness goal?</label>
+            <input type="text" id="goal" name="goal" placeholder="Get shredded" required>
+        </div>
+
+        <div class="question">
+            <!-- Question 2 -->
+            <label>2. How often do you exercise?</label>
+            <div class="options">
+                <label><input type="radio" name="frequency" value="Daily"> Daily</label>
+                <label><input type="radio" name="frequency" value="Several times a week"> Several times a week</label>
+                <label><input type="radio" name="frequency" value="Once a week"> Once a week</label>
+                <label><input type="radio" name="frequency" value="Rarely"> Rarely</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <!-- Question 3 -->
+            <label for="current-activity">3. What types of activities do you currently engage in? (e.g., running, weightlifting)</label>
+            <textarea id="current-activity" name="current-activity" rows="4" placeholder="Everything!" required></textarea>
+        </div>
+
+        <div class="question">
+            <!-- Question 4 -->
+            <label>4. Are you interested in any specific types of workouts? (Select all that apply)</label>
+            <div class="options">
+                <label><input type="checkbox" name="workouts" value="Strength training"> Strength training</label>
+                <label><input type="checkbox" name="workouts" value="Cardio"> Cardio</label>
+                <label><input type="checkbox" name="workouts" value="Yoga"> Yoga</label>
+                <label><input type="checkbox" name="workouts" value="HIIT"> HIIT</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <!-- Question 5 -->
+            <label for="motivation">5. What motivates you to stay fit?</label>
+            <input type="text" id="motivation" name="motivation" placeholder="For my kids!" required>
+        </div>
+
+        <button type="submit" class="submit-button">Submit</button>
+        </form>
+   </div>
+
 <!-- Adding footer for discount -->
 <div id="footBtn">
 <footer id="footer">
-    <button id="btn">Limited 60% discount now avaialble on our yearly membership!</button>
+    <button id="btn"><b>Limited 60% discount now avaialble on our yearly membership!</b></button>
 </footer>
 </div>
 <script src="Interactivity.js"></script>

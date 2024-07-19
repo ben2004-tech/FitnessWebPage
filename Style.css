@@ -1,9 +1,19 @@
+/* General Styles */
 body {
     background-color: black;
+    margin: 0; /* Remove default margin from body */
+    font-family: Arial, sans-serif; /* Set a default font family */
+    color: white;
+    padding-bottom: 80px; /* Add padding to the bottom to ensure content is not hidden behind the footer */
 }
 
+/* Ensure proper spacing between sections */
+.content-container {
+    padding: 20px;
+    margin-top: 180px; /* Adjust this margin to ensure the form is below #Message and #Info */
+}
 
-/* Existing styles for the headings */
+/* Headings */
 .headings {
     display: flex;
     justify-content: space-around;
@@ -12,11 +22,12 @@ body {
     border-radius: 30px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+    margin: 0; /* Remove margin to fit within the viewport */
 }
 
+/* Remove margin from headings containers */
 .headings div {
-    margin: 0 10px;
+    margin: 0;
 }
 
 .headings a {
@@ -31,17 +42,16 @@ body {
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
-    font-family: 'Arial', sans-serif;
     font-size: 18px;
 }
 
-/* Hover effect for the headings */
+/* Hover effects */
 .headings h2:hover {
     background-color: lightgrey;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Dropdown menu styles */
+/* Dropdown Menu */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -76,7 +86,7 @@ body {
     display: block;
 }
 
-/* Mobile responsiveness */
+/* Mobile Responsiveness */
 @media (max-width: 600px) {
     .headings {
         flex-direction: column;
@@ -87,7 +97,7 @@ body {
     }
 }
 
-/* Styling for the Info section */
+/* Info Section */
 #Info {
     display: flex;
     justify-content: center;
@@ -97,14 +107,13 @@ body {
     border: 2px solid white;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 30%; /* Adjust this value to make the Info box shorter */
+    width: 300px;
     max-width: 800px;
-    margin-bottom: 20px; /* Ensure there's space at the bottom of the page */
     position: fixed;
     bottom: 15%;
-    left:50%;
+    left: 50%;
     transform: translateX(-50%);
-    width: 300px;
+    z-index: 10; /* Ensure it stays above other elements */
 }
 
 #Info a {
@@ -118,7 +127,6 @@ body {
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
-    font-family: 'Arial', sans-serif;
     font-size: 18px;
 }
 
@@ -127,47 +135,100 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Message Section */
 #Message {
     font-size: x-large;
-    color: white;
     position: fixed;
     bottom: 35%;
-    left:50%;
+    left: 50%;
     transform: translateX(-50%);
     width: 900px;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+    z-index: 10; /* Ensure it stays above other elements */
 }
 
+/* Quiz Container */
+.quiz-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 20px; /* Add margin-top to ensure it's pushed down */
+}
+
+/* Form Questions */
+.question {
+    margin-bottom: 20px;
+}
+
+.question label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.question input[type="text"],
+.question textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.question input[type="radio"],
+.question input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.options {
+    margin-left: 20px;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+/* Footer Section */
 #footBtn {
     position: fixed;
     bottom: 0;
     width: 100%;
-  }
-  
-  #footer {
+}
+
+#footer {
     background-color: gray;
     color: white;
-    width: 100%;
     height: 2.5rem;
     display: flex;
     align-items: center; /* Center vertically */
     justify-content: center; /* Center horizontally */
-  }
-  
-  #btn {
-    background-color:gray;
+}
+
+#btn {
+    background-color: gray;
     font-size: x-large;
-    color: white; /* Ensure the text color is white to match the footer text color */
-    border: none; /* Remove default button border */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for background color change */
-  }
-  
-  #btn:hover {
-    background-color: lightgray; /* Change the background color on hover */
-  }
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-  
-
-
+#btn:hover {
+    background-color: lightgray;
+}
