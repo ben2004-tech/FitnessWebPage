@@ -1,0 +1,150 @@
+body {
+    background-color: black;
+}
+
+
+/* Existing styles for the headings */
+.headings {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: grey;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.headings div {
+    margin: 0 10px;
+}
+
+.headings a {
+    text-decoration: none;
+}
+
+.headings h2 {
+    margin: 0;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+}
+
+/* Hover effect for the headings */
+.headings h2:hover {
+    background-color: lightgrey;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdown menu styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 1;
+    min-width: 160px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: lightgrey;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .headings {
+        flex-direction: column;
+    }
+
+    .headings div {
+        margin: 10px 0;
+    }
+}
+
+/* Styling for the Info section */
+#Info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 30px;
+    border: 2px solid white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Adjust this value to make the Info box shorter */
+    max-width: 800px;
+    margin-bottom: 20px; /* Ensure there's space at the bottom of the page */
+    position: fixed;
+    bottom: 15%;
+    left:50%;
+    transform: translateX(-50%);
+    width: 300px;
+}
+
+#Info a {
+    text-decoration: none;
+}
+/* 
+#Info.fixed{
+    position: fixed;
+    bottom: 20;
+    left:50%;
+    right: 0;
+    transform: translateX(-50%);
+    width: 300px;
+
+} */
+
+#Info h3 {
+    margin: 0;
+    padding: 10px 20px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+}
+
+#Info:hover {
+    background-color: lightgrey;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#Message {
+    font-size: x-large;
+    color: white;
+    position: fixed;
+    bottom: 35%;
+    left:50%;
+    transform: translateX(-50%);
+    width: 900px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
