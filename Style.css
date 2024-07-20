@@ -51,7 +51,7 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Dropdown Menu */
+/* Dropdown menu styles */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -64,7 +64,7 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     padding: 10px;
     border-radius: 8px;
-    z-index: 1;
+    z-index: 3;
     min-width: 160px;
 }
 
@@ -85,7 +85,6 @@ body {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
     .headings {
@@ -97,67 +96,31 @@ body {
     }
 }
 
-/* Info Section */
-#Info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    border-radius: 30px;
-    border: 2px solid white;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    max-width: 800px;
-    position: fixed;
-    bottom: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10; /* Ensure it stays above other elements */
-}
 
-#Info a {
-    text-decoration: none;
-}
-
-#Info h3 {
-    margin: 0;
-    padding: 10px 20px;
-    color: white;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-    font-size: 18px;
-}
-
-#Info:hover {
-    background-color: lightgrey;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
 
 /* Message Section */
 #Message {
     font-size: x-large;
-    position: fixed;
-    bottom: 35%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 900px;
-    text-align: center;
+    position: relative; /* Ensure it flows naturally with the page */
+    width: 90%; /* Responsive width */
+    max-width: 900px; /* Max width for larger screens */
+    margin: 20px auto; /* Center horizontally with margin */
+    text-align: center; /* Center text */
     font-family: 'Courier New', Courier, monospace;
-    z-index: 10; /* Ensure it stays above other elements */
+    z-index: 10; /* Keep above other elements if necessary */
 }
+
 
 /* Quiz Container */
 .quiz-container {
-    background-color: white;
+    background-color: rgb(56,56,56);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     max-width: 600px;
-    margin: 0 auto;
-    margin-top: 20px; /* Add margin-top to ensure it's pushed down */
+    margin: 50px auto 20px auto; /* Increase margin-top to push down */
 }
+
 
 /* Form Questions */
 .question {
@@ -165,6 +128,7 @@ body {
 }
 
 .question label {
+    color: white;
     display: block;
     font-weight: bold;
     margin-bottom: 8px;
@@ -189,19 +153,21 @@ body {
 
 .submit-button {
     display: block;
-    width: 100%;
+    width: fit-content;
     padding: 10px;
-    background-color: #28a745;
+    background-color: black;
     color: white;
-    border: none;
-    border-radius: 4px;
+    border: 1px solid #ddd; /* Fix for border color */
+    border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin: 0 auto; /* Center the button */
 }
 
+
 .submit-button:hover {
-    background-color: #218838;
+    background-color: gray;
 }
 
 /* Footer Section */
