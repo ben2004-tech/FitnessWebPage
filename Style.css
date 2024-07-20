@@ -1,10 +1,15 @@
 /* General Styles */
 body {
-    background-color: black;
+    /* background-color: black; */
+    background-image: url("https://t3.ftcdn.net/jpg/02/56/17/92/360_F_256179223_FDWWNhqs8afJPs2W0iUUptiFXte4K8gP.jpg");
     margin: 0; /* Remove default margin from body */
     font-family: Arial, sans-serif; /* Set a default font family */
     color: white;
     padding-bottom: 80px; /* Add padding to the bottom to ensure content is not hidden behind the footer */
+}
+
+.top{
+    background-color: black;
 }
 
 /* Ensure proper spacing between sections */
@@ -70,7 +75,8 @@ body {
 
 .dropdown-content a {
     color: white;
-    padding: 10px 20px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px 30px;
     text-decoration: none;
     display: block;
     font-size: 16px;
@@ -197,4 +203,9 @@ body {
 
 #btn:hover {
     background-color: lightgray;
+}
+
+#quizTitle{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;"
 }
