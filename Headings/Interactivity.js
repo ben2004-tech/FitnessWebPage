@@ -14,7 +14,7 @@ document.getElementById('fitness-quiz').addEventListener('submit', function(even
             case 'Several times a week':
                 // Perform a certain task if "Several times a week" is selected
                 console.log('User exercises several times a week.');
-                alert('Excellent! You have a good routine going.');
+                alert('');
                 break;
             case 'Once a week':
                 // Perform a certain task if "Once a week" is selected
@@ -24,7 +24,7 @@ document.getElementById('fitness-quiz').addEventListener('submit', function(even
             case 'Rarely':
                 // Perform a certain task if "Rarely" is selected
                 console.log('User rarely exercises.');
-                alert('It’s never too late to start! Begin with small steps.');
+                alert('');
                 break;
             default:
                 console.log('No valid frequency selected.');
