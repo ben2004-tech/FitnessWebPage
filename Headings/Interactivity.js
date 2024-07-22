@@ -3,75 +3,44 @@ document.getElementById('fitness-quiz').addEventListener('submit', function(even
 
     // Check question 2
     let frequency = document.querySelector('input[name="frequency"]:checked');
-    if (frequency) {
-        switch (frequency.value) {
-            case 'Daily':
-                // Perform a certain task if "Daily" is selected
-                console.log('User exercises daily.');
-                alert('Great! You exercise daily. Keep it up!');
-                break;
-            case 'Several times a week':
-                // Perform a certain task if "Several times a week" is selected
-                console.log('User exercises several times a week.');
-                alert('Keep up the good work!');
-                break;
-            case 'Once a week':
-                // Perform a certain task if "Once a week" is selected
-                console.log('User exercises once a week.');
-                alert('Good start! Try to increase your frequency.');
-                break;
-            case 'Rarely':
-                // Perform a certain task if "Rarely" is selected
-                console.log('User rarely exercises.');
-                alert('Try to exercise more frequently!');
-                break;
-            default:
-                console.log('No valid frequency selected.');
-        }
-    }
-
+    
     // Check question 4
     let workouts = document.querySelectorAll('input[name="workouts"]:checked');
     let cardioOrYogaSelected = false; // Flag to check if Cardio or Yoga is selected
-    let hitOrStrengthSelected = false;
+    let hitOrStrengthSelected = false; // Flag to check if HIIT or Strength training is selected
 
     workouts.forEach(workout => {
-        if (workout.value === 'Strength training') {
-            // Perform a certain task if "Strength training" is selected
-            console.log('User is interested in strength training.');
-            alert('Strength training is essential for building muscle!');
+        if (workout.value === 'Strength training' || workout.value === 'HIIT') {
             hitOrStrengthSelected = true;
         }
-        if (workout.value === 'Cardio') {
-            // Perform a certain task if "Cardio" is selected
-            console.log('User is interested in cardio.');
-            alert('Cardio is great for cardiovascular health!');
-            cardioOrYogaSelected = true; // Set flag to true if Cardio is selected
-        }
-        if (workout.value === 'Yoga') {
-            // Perform a certain task if "Yoga" is selected
-            console.log('User is interested in yoga.');
-            alert('Yoga is great for flexibility and mental health!');
-            cardioOrYogaSelected = true; // Set flag to true if Yoga is selected
-        }
-        if(workout.value ==='HIIT'){
-            console.log('HIIT selected');
-            hitOrStrengthSelected = true;
+        if (workout.value === 'Cardio' || workout.value === 'Yoga') {
+            cardioOrYogaSelected = true;
         }
     });
 
-    // Continue with form submission if needed
-    if (frequency && frequency.value === 'Daily' && cardioOrYogaSelected) {
-        console.log('GMMMMMM');
-    }
-    if(frequency && (frequency.value === 'Rarely' || frequency.value ==='Once a week') && hitOrStrengthSelected){
-        console.log('Hellooooooo cheese');
-    }
-    if(frequency && frequency.value === 'Several times a week' && (hitOrStrengthSelected || cardioOrYogaSelected)){
-console.log('Steak and eggs');
+    // Determine the action based on the conditions
+    if (frequency) {
+        if (frequency.value === 'Daily' && cardioOrYogaSelected) {
+            // Go to fat loss page
+            console.log('GMMMMMM');
+        } else if ((frequency.value === 'Rarely' || frequency.value === 'Once a week') && hitOrStrengthSelected) {
+            // Go to muscle gain page
+            console.log('Hellooooooo cheese');
+        } else if (frequency.value === 'Several times a week' && (hitOrStrengthSelected || cardioOrYogaSelected)) {
+            // Go to strength mobility page
+            console.log('Steak and eggs');
+        } else {
+            // Go to default page (assuming strength mobility page as default)
+            console.log('wcjbhcehjhj');
+        }
+    } else {
+        // Handle the case where no frequency is selected (if necessary)
+        console.log('Please select your exercise frequency.');
     }
 
-    //this.submit(); // Uncomment this line if you want to actually submit the form after performing task
+    // Uncomment the following line if you want to actually submit the form after performing the tasks
+    // this.submit();
 });
+
 
 
